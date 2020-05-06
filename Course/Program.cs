@@ -12,7 +12,7 @@ namespace Course
             int[] numbers = new int[] { 2, 3, 4, 5 };
 
             // Define the query expression
-            List<int> result = numbers.Where(x => x % 2 == 0).Select(x => x * 10).ToList();
+            IEnumerable<int> result = numbers.Where(x => x % 2 == 0).Select(x => x * 10);
 
             foreach (int i in result)
             {
